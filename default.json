@@ -3,12 +3,11 @@
   "extends": [
     "config:recommended",
     ":timezone(Asia/Tokyo)",
-    "schedule:weekly",
-    ":prNotPending"
+    "schedule:weekly"
   ],
+  "minimumReleaseAge": "7 days",
   "labels": ["dependencies", "renovate"],
   "vulnerabilityAlerts": {
-    "enabled": true,
     "labels": ["security"]
   },
   "postUpdateOptions": ["pnpmDedupe"],
