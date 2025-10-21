@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "lint": "renovate-config-validator --strict ./default.json ./no-group.json"
+    "lint": "renovate-config-validator --strict ./default.json"
   },
   "author": "nu0ma",
   "license": "MIT",
