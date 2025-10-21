@@ -6,6 +6,7 @@
     "schedule:weekly"
   ],
   "minimumReleaseAge": "7 days",
+  "schedule": ["at 6:00 am on saturday"],
   "labels": ["dependencies", "renovate"],
   "vulnerabilityAlerts": {
     "labels": ["security"]
