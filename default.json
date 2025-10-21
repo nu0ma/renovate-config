@@ -1,0 +1,49 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:recommended",
+    ":timezone(Asia/Tokyo)",
+    "schedule:weekly",
+    ":prNotPending"
+  ],
+  "labels": ["dependencies", "renovate"],
+  "vulnerabilityAlerts": {
+    "enabled": true,
+    "labels": ["security"]
+  },
+  "postUpdateOptions": ["pnpmDedupe"],
+  "rangeStrategy": "bump",
+  "platformAutomerge": true,
+  "dependencyDashboard": false,
+  "lockFileMaintenance": {
+    "enabled": true
+  },
+  "packageRules": [
+    {
+      "matchManagers": ["npm"],
+      "matchUpdateTypes": ["minor", "patch"],
+      "automerge": true
+    },
+    {
+      "groupName": "Core tooling",
+      "matchPackageNames": ["eslint", "prettier", "typescript"],
+      "automerge": false
+    },
+    {
+      "groupName": "TypeScript ecosystem",
+      "matchPackagePatterns": ["^@types/", "^ts-node", "^typescript-eslint"]
+    },
+    {
+      "matchManagers": ["github-actions"],
+      "pinDigests": true,
+      "matchUpdateTypes": ["minor", "patch"],
+      "automerge": true,
+      "groupName": "GitHub Actions updates"
+    },
+    {
+      "matchManagers": ["github-actions"],
+      "matchUpdateTypes": ["major"],
+      "automerge": false
+    }
+  ]
+}

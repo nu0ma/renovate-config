@@ -1,0 +1,18 @@
+{
+  "name": "@nu0ma/renovate-config",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "lint": "renovate-config-validator --strict ./default.json ./no-group.json"
+  },
+  "author": "nu0ma",
+  "license": "MIT",
+  "keywords": [
+    "renovate",
+    "npm"
+  ],
+  "packageManager": "pnpm@10.14.0",
+  "devDependencies": {
+    "renovate": "^41.155.4"
+  }
+}
