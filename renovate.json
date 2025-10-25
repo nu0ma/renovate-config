@@ -1,0 +1,3 @@
+{
+  "extends": ["github>nu0ma/renovate-config"]
+}
