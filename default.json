@@ -2,11 +2,9 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
     "config:recommended",
-    ":timezone(Asia/Tokyo)",
-    "schedule:weekly"
+    ":timezone(Asia/Tokyo)"
   ],
   "minimumReleaseAge": "7 days",
-  "schedule": ["at 6:00 am on saturday"],
   "labels": ["dependencies", "renovate"],
   "vulnerabilityAlerts": {
     "labels": ["security"]
